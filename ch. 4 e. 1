@@ -1,0 +1,25 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+  std::vector<double> temps;
+  for (double temp; std::cin >> temp;)
+  temps.push_back(temp);
+  std::sort(temps.begin(), temps.end());
+  int size=temps.size();
+  double sum = 0;
+  for (int x:temps) sum +=x;
+  if (size%2==0) {
+      std::cout <<"A median temperature: " << (temps[(size-1)/2]+temps[(size/2)])/2 << "\n";
+  }
+  else {
+      std::cout << "A median temperature: " << temps[(size)/2]  << "\n";
+  }
+  std::cout << "An average temrepature: " << sum/temps.size() << "\n";
+  
+  
+  
+}
