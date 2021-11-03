@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int
+main ()
+{
+  std::vector < double >distances;
+  for (double distance; std::cin >> distance;)
+    distances.push_back (distance);
+  double sum = 0;
+  int i;
+  std::sort (distances.begin (), distances.end ());
+for (int x:distances)
+    sum += x;
+  std::cout << "The sum of all distances is: " << sum << "\n";
+  std::cout << "The smalest distance is: " << distances[0] << "\n";
+  std::cout << "The greatest distance between two neighboring cities is: " <<
+    distances[distances.size()-1] << "\n";
+  std::cout << "The mean distance between two neighboring cities is: " << sum /
+    distances.size () << "\n";
+}
