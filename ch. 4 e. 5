@@ -1,0 +1,30 @@
+#include <iostream>
+
+int main ()
+{
+   double x,y;
+   std::string z = " ", op;
+   double result;
+   std::cout << "Please enter two values separated by +,-,* or /\n";
+   std::cin >> x >> z >> y;
+   if (z == "+") {
+       op = "The sum of ";
+       result = x+y;
+   }
+   else if (z == "-") {
+       op = "The difference between ";
+       result = x-y;
+       }
+   else if (z == "*") {
+       op = "The product of ";
+       result = x*y;
+       }
+    else if (z == "/") {
+        op = "The ratio of ";
+        result = x/y;
+        if (y == 0) { 
+            std::cout <<" Trying to devide by 0 #DIV/0!";
+        }
+   }
+   std::cout << op << x <<" and " << y << " is " << result <<".\n";
+}
