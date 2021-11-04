@@ -1,0 +1,26 @@
+/*numbers guessing game*/ 
+
+
+#include <iostream>
+
+int main ()
+{
+    int max = 100;
+    int min = 0;
+    std::string y = " ";
+    
+    while (max>min) {
+        std::cout << "Is the number less than or equal " << (max+min)/2 << "? Please enter a if less, b is more and c if equal. \n";
+        std::cin >> y;
+        if (y == "a") {
+            max = (max+min)/2;
+    }
+        else if (y == "b") {
+            min=(max+min)/2;
+        }
+        else if (y == "c") {
+        std::cout << "Your number is " << (max+min)/2 << ".\n";
+        max=min;
+        }
+}
+}
