@@ -1,0 +1,51 @@
+/******************************************************************************
+Write a program that plays the game “Rock, Paper, Scissors.” If you are not familiar with the game do some research
+(e.g., on the web using Google). Research is a common task for programmers.  Also, the machine should give random answers 
+(i.e., select the next rock, paper, or scissors randomly). 
+*******************************************************************************/
+#include <iostream>
+#include  <tgmath.h> 
+#include <vector>
+
+int main()
+
+{
+ std::string comp = "";
+ std::vector <std::string> game = {"rock", "paper","scissors"};
+ int user,i;
+ std::string result;
+ double sine;
+ std::cout << "Whant to play Rock, Paper, Scissors game?\n";
+ std::cout << "Enter 1 for rock, 2 for paper or 3 scissors\n";
+ while (std::cin >> user) {
+     i+=10; // i increases by 10 each time
+      sine = sin(i/user); 
+ 
+ if (sine<-0.33) {
+     comp = "rock";
+ }
+ else if (sine>=-0.33 && sine<=0.33) {
+     comp = "paper";
+ }
+ else {
+     comp ="scissors";
+ }
+ if (game[user-1]==comp) {
+     result = "This is a draw.";
+ }
+ if ((user==1 && sine>0.33) || (user==2&& sine<-0.33) || (user==3 && sine>=-0.33 && sine<=0.33)) {
+     result = "You won!";
+ }
+ if ((user==2 && sine>0.33) || (user==3 && sine<-0.33)|| (user==1 && sine>=-0.33 && sine<=0.33)) {
+     result = "You lose.";   
+ }
+ if (user>3) {
+     std::cout << "You entered wrong number.Please try again. \n";
+ }
+ else {
+ std::cout << "You entered "<< game[user-1] <<", I entered " << comp<<". " << result <<"\n";
+ std::cout << "Please try again\n";
+ }
+}
+}
+ 
