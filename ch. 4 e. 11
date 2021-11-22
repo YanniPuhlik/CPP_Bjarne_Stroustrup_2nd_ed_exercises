@@ -1,0 +1,28 @@
+Create a program to find all the prime numbers between 1 and 100.
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+   int max; 
+   std::cout << "Input value max and I will show you all prime numbers from 1 to max. \n";
+   std::cin >> max;
+   std::vector <int> prime;
+   std::cout << "You asked to show you prime numbers from 1-" << max<<". Here they are: \n";
+   for (int i = 2; i<=max; i++) {
+       for (int j=2; j<=i; j++) {
+           if (!(i%j)&&(i!=j)) {
+               break;
+           }
+           if (i==j) {
+               prime.push_back(i);
+              std::cout << i << endl;
+              }
+           }
+           
+       }
+   }
+
+
