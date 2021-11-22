@@ -1,0 +1,25 @@
+/******************************************************************************
+Write a program to solve quadratic equations. A quadratic equation is of the form
+
+ax2 + bx + c = 0
+*******************************************************************************/
+#include <iostream>
+#include <math.h>
+
+int main () 
+{
+    double a,b,c,x1,x2;
+    std::cout << "Please enter a,b, and c values for equation ax2 + bx + c = 0. \n";
+    std::cout << " a > 0, (b2 - 4ac) > 0; \n";
+    std::cin >> a >> b >> c;
+    if ((b*b-4*a*c)>0) {
+        x1=(-b+sqrt(b*b-4*a*c))/2*a;
+        x2=(-b-sqrt(b*b-4*a*c))/2*a;
+        std::cout << "Here is the solution: x1 = " <<x1<<", x2 = "<<x2<<".\n";
+    }
+    
+    else {
+        std::cout <<"You entered a < 0 or  (b^2 - 4ac) < 0.\n";
+    }
+    
+}
