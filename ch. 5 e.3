@@ -1,0 +1,47 @@
+/******************************************************************************
+
+Add to the program so that it can also convert from Kelvin to Celsius.
+Place a check in the main program that will produce an error if a temperature 
+is given below –273.15°C.
+
+*******************************************************************************/
+#include <iostream>
+
+double ctok(double c) // converts Celsius to Kelvin
+{
+double k = c + 273.15;
+    return k;
+}
+
+double ktok (double ke) // converts Kelvin to Celcius
+{
+    double ce = ke-273.15;
+    return ce;
+}
+
+int main()
+{
+double c = -273.15;// declare input variable
+std::cout << "Enter temperature in degrees Celcius.\n";
+std::cin >> c; // retrieve temperature to input variable
+double k = ctok(c); // convert temperature
+if (c>=-273.15) {
+    std::cout << c<< " degrees Celcius is "<<k <<" degrees Kelvin.\n" ; // print out temperature
+}
+else {
+    std::cout << "Error, temperature value entered is  below –273.15°C. \n";
+}
+
+double ke = -459.67;
+std::cout << "Enter temperature in Kelvin.\n";
+std::cin >> ke; // retrieve temperature to input variable
+double ce = ktok(ke);// convert temperature
+if (ke >=-459.67) {
+    std::cout << ke<< " degrees Kelvin is "<<ce <<" degrees Celcius.\n" ; // print out temperature
+}
+else {
+   std::cout << "Error, temperature value entered is  below –459.67°K. \n";
+}
+
+
+}
