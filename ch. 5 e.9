@@ -1,0 +1,35 @@
+/******************************************************************************
+Modify the program from exercise 8 to write out an error if the result cannot be
+represented as an int.
+*******************************************************************************/
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    int x;
+    std::vector <double> numbers;
+    std::cout << "Please enter the number of values you want to sum: \n";
+    std::cin >> x;
+    std::cout << "Please enter some integers (press '|' to stop):” 12 23 13 24 15 |\n";
+    for (double number; std::cin >> number;)
+    numbers.push_back (number);
+    if (x==numbers.size()) {
+    double sum = 0;
+    for (double x:numbers)
+    sum += x;
+    int sum_int = sum;
+    if ( sum_int == sum) {
+    std::cout << "The sum of all distances is: " << sum << "\n";
+    }
+    if ( sum_int != sum) {
+        std::cout << "The result cannot be represented as an int.\n";
+    }
+    }
+    else {
+        std::cout << "Error, you ask for a sum of more/less numbers than there are in the vector.\n";
+        
+    }    
+}
