@@ -33,6 +33,6 @@ int main()
     std::cout << "The sum of all distances is: " << sum << "\n";
     }
     else {
-        std::cout << "Error, you ask for a sum of more numbers than there are in the vector.\n";
+        std::cout << "Error, you ask for a sum of more/less numbers than there are in the vector.\n";
     }
 }
